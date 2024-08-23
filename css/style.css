@@ -1,0 +1,117 @@
+/* Navigation Bar */
+nav {
+    background-color: #fc7a7a;
+    color: black;
+    padding: 10px;
+    display: flex;
+}
+
+nav > header {
+    display: flex;
+    margin-right: auto;
+}
+
+nav > header >.header-logo {
+    background-image: url(https://cdn-icons-png.flaticon.com/512/3135/3135715.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+nav > section {
+    display: inline-block;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 5px;
+}
+
+nav > section > a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+nav > section > a:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Main */
+main {
+    background-color: antiquewhite;
+    padding: 5px;
+    display: grid;
+}
+
+main > article > .banner {
+    background-image: url(https://www.ifolor.ch/content/dam/ifolor/inspire-gallery/FFL/photoshop-ein-panorama-aus-einzelaufnahmen-erstellen/Panorama-580.jpg);
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: black 1px solid;
+    border-radius: 5px;
+}
+
+main > .profile > .profile-list {
+    display: flex;
+}
+
+main > .profile > .profile-list > .profile-container {
+    display: grid;
+    justify-items: center;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main > .profile > .profile-list > .profile-container > .image {
+    background-image: url(https://cdn-icons-png.flaticon.com/512/3135/3135715.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+}
+
+main > .profile > .profile-list > .profile-container > span {
+    font-weight: bold;
+    font-size: large;
+    padding: 10px;
+}
+
+main > .portfolio {
+    justify-content: center;
+    display: grid;
+}
+
+main > .portfolio > .portfolio-container {
+    display: flex;
+    width: 90%;
+
+}
+
+main > .portfolio > .profile-container > .form-init {
+    justify-items: center;
+    margin-right: auto;
+}
+
+main > .portfolio > .portfolio-container > .form-result {
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    margin-left: auto;
+}
+
+/* Footer */
+footer {
+    background-color: #fc7a7a;
+    color: black;
+    padding: 10px;
+    text-align: end;
+}
