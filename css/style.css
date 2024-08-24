@@ -1,3 +1,9 @@
+/* Body */
+body {
+    margin: 0;
+    padding: 0;
+}
+
 /* Navigation Bar */
 nav {
     background-color: #fc7a7a;
@@ -44,9 +50,19 @@ nav > section > a:hover {
 /* Main */
 main {
     background-color: antiquewhite;
-    padding: 5px;
     display: grid;
 }
+
+main > article > header {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+main > article > p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 
 main > article > .banner {
     background-image: url(https://www.ifolor.ch/content/dam/ifolor/inspire-gallery/FFL/photoshop-ein-panorama-aus-einzelaufnahmen-erstellen/Panorama-580.jpg);
@@ -54,12 +70,16 @@ main > article > .banner {
     height: 600px;
     background-size: cover;
     background-repeat: no-repeat;
-    border: black 1px solid;
-    border-radius: 5px;
+}
+
+main > .profile {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 main > .profile > .profile-list {
     display: flex;
+    margin-bottom: 20px;
 }
 
 main > .profile > .profile-list > .profile-container {
@@ -86,26 +106,49 @@ main > .profile > .profile-list > .profile-container > span {
 }
 
 main > .portfolio {
-    justify-content: center;
     display: grid;
+    background-color: aqua;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    padding-top: 15px;
+    border-top: black 1px solid;
+}
+
+main > .portfolio > header {
+    width: 80vw;
 }
 
 main > .portfolio > .portfolio-container {
     display: flex;
-    width: 90%;
-
+    align-items: center;
 }
 
-main > .portfolio > .profile-container > .form-init {
+main > .portfolio > .portfolio-container > .form-init {
     justify-items: center;
     margin-right: auto;
+    width: 40%;
+    padding-right: 20px;
+}
+
+.form-input {
+    background-color: #ffffff;
+    border: 1px solid black;
+    color: black;
+    padding: 1px 2px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    width: 98%;
+    border-radius: 5px;
 }
 
 main > .portfolio > .portfolio-container > .form-result {
-    width: 400px;
-    height: 400px;
+    width: 60%;
+    height: 200px;
+    justify-content: flex-end;
     border: 1px solid black;
-    margin-left: auto;
+    background-color:rgba(100, 100, 100, 0.5);
 }
 
 /* Footer */
