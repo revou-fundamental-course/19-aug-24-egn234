@@ -3,9 +3,10 @@ let currentIndex = 0;
 let intervalId;
 
 function showSlide(index) {
-    const carouselInner = document.querySelector('.banner-inner');
+    const bannerInner = document.querySelector('.banner-inner');
     const totalSlides = document.querySelectorAll('.banner-item').length;
 
+    // pengecekan jika index melebihi total slide
     if (index >= totalSlides) {
         currentIndex = 0;
     } else if (index < 0) {
@@ -14,21 +15,26 @@ function showSlide(index) {
         currentIndex = index;
     }
 
-    carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+    // menampilkan transisi slide
+    bannerInner.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
+// Button Next
 function nextSlide() {
     showSlide(currentIndex + 1);
 }
 
+// Button Prev
 function prevSlide() {
     showSlide(currentIndex - 1);
 }
 
+// Auto Slide pakai interval 3 detik (3000 ms)
 function autoSlide() {
     intervalId = setInterval(nextSlide, 3000);
 }
 
+// Memanggil fungsi
 autoSlide();
 
 // Form Function and Validation
@@ -65,5 +71,6 @@ function displayFormResult(event) {
         <b>Jenis Kelamin</b>: ${gender}<br>
         <b>Pesan</b>: ${message}<br>
     `;
+    
     document.getElementById('form-result').innerHTML = result;
 }
