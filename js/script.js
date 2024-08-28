@@ -1,3 +1,37 @@
+// Banner
+let currentIndex = 0;
+let intervalId;
+
+function showSlide(index) {
+    const carouselInner = document.querySelector('.banner-inner');
+    const totalSlides = document.querySelectorAll('.banner-item').length;
+
+    if (index >= totalSlides) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = totalSlides - 1;
+    } else {
+        currentIndex = index;
+    }
+
+    carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+function nextSlide() {
+    showSlide(currentIndex + 1);
+}
+
+function prevSlide() {
+    showSlide(currentIndex - 1);
+}
+
+function autoSlide() {
+    intervalId = setInterval(nextSlide, 3000);
+}
+
+autoSlide();
+
+// Form Function and Validation
 function displayFormResult(event) {
     event.preventDefault();
 

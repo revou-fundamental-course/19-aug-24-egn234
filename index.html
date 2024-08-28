@@ -26,7 +26,21 @@
                     <h1>Welcome to MyWebsite</h1>
                 </header>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <div class="banner"></div>
+                <div class="banner">
+                    <div class="banner-inner">
+                        <div class="banner-item">
+                            <img src="https://via.placeholder.com/1200x600/FF0000/FFFFFF?text=Banner+1" alt="Banner 1">
+                        </div>
+                        <div class="banner-item">
+                            <img src="https://via.placeholder.com/1200x600/00FF00/FFFFFF?text=Banner+2" alt="Banner 2">
+                        </div>
+                        <div class="banner-item">
+                            <img src="https://via.placeholder.com/1200x600/0000FF/FFFFFF?text=Banner+3" alt="Banner 3">
+                        </div>
+                    </div>
+                    <button class="prev" onclick="prevSlide()">&#10094;</button>
+                    <button class="next" onclick="nextSlide()">&#10095;</button>
+                </div>
             </article>
             
             <section class="profile" id="profil">
@@ -81,7 +95,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <label for="jk">Jenis kelamin</label>
+                                        <label>Jenis kelamin</label>
                                     </td>
                                     <td>:</td>
                                     <td>

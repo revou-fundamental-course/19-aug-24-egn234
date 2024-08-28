@@ -10,6 +10,10 @@ nav {
     color: black;
     padding: 10px;
     display: flex;
+    position: fixed;
+    top: 0;
+    width: -webkit-fill-available;
+    z-index: 1;
 }
 
 nav > header {
@@ -18,9 +22,10 @@ nav > header {
 }
 
 nav > header >.header-logo {
-    background-image: url(https://cdn-icons-png.flaticon.com/512/3135/3135715.png);
+    background-image: url(https://pbs.twimg.com/profile_images/1437720792473628677/vRkzKAhw_400x400.jpg);
     background-size: contain;
     background-repeat: no-repeat;
+    border-radius: 100%;
     width: 40px;
     height: 40px;
 }
@@ -51,6 +56,7 @@ nav > section > a:hover {
 main {
     background-color: antiquewhite;
     display: grid;
+    margin-top: 60px;
 }
 
 main > article > header {
@@ -64,14 +70,52 @@ main > article > p {
 }
 
 
-main > article > .banner {
-    background-image: url(https://www.ifolor.ch/content/dam/ifolor/inspire-gallery/FFL/photoshop-ein-panorama-aus-einzelaufnahmen-erstellen/Panorama-580.jpg);
+/* Banner */
+.banner {
+    position: relative;
     width: 100%;
-    height: 600px;
-    background-size: cover;
-    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
+.banner-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.banner-item {
+    flex: 1 0 100%;
+}
+
+.banner-item img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.banner > button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.banner > .prev {
+    left: 10px;
+}
+
+.banner > .next {
+    right: 10px;
+}
+
+.banner > button:focus {
+    outline: none;
+}
+
+/* Profile */
 main > .profile {
     padding-left: 10px;
     padding-right: 10px;
