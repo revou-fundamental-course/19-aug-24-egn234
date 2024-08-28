@@ -1,3 +1,8 @@
+/* membenarkan posisi navbar scrolling */
+html {
+    scroll-padding-top: 60px;
+}
+
 /* Body */
 body {
     margin: 0;
@@ -131,13 +136,19 @@ main > .profile > .profile-list > .profile-container {
 }
 
 main > .profile > .profile-list > .profile-container > .image {
-    background-image: url(https://cdn-icons-png.flaticon.com/512/3135/3135715.png);
-    background-size: contain;
-    background-repeat: no-repeat;
     width: 100px;
     height: 100px;
-    padding: 5px;
+    border-radius: 100%;
+    overflow: hidden;
 }
+
+main > .profile > .profile-list > .profile-container > .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 
 main > .profile > .profile-list > .profile-container > span {
     font-weight: bold;
@@ -148,7 +159,6 @@ main > .profile > .profile-list > .profile-container > span {
 /* Portfolio */
 main > .portfolio {
     display: grid;
-    background-color: aqua;
     align-items: center;
     justify-content: center;
     padding-bottom: 30px;
@@ -163,15 +173,21 @@ main > .portfolio > header {
 main > .portfolio > .portfolio-container {
     display: flex;
     align-items: center;
-    flex-direction: column;
-    text-align: center;
 }
 
 main > .portfolio > .portfolio-container > .form-init {
     justify-items: center;
     margin-right: auto;
-    width: 100%;
+    width: 40%;
     padding-right: 0;
+}
+
+#form-result {
+    width: 60%;
+    margin-left: 10px;
+    height: 250px;
+    border: 1px solid black;
+    background-color: rgba(100, 100, 100, 0.5);
 }
 
 /* Form Elements */
@@ -204,13 +220,6 @@ main > .portfolio > .portfolio-container > .form-init {
 
 .form-radio + span {
     vertical-align: middle;
-}
-
-#form-result {
-    width: 100%;
-    height: 250px;
-    border: 1px solid black;
-    background-color: rgba(100, 100, 100, 0.5);
 }
 
 .form-table {
@@ -259,17 +268,18 @@ footer {
 /* Tablet - Ipad */
 @media (max-width: 768px) {
     /* Navigation */
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
     nav > section {
         margin: 10px 0;
     }
+    
+    nav > section > a {
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
 
     main {
-        margin-top: 0;
+        margin-top: 60px;
     }
 
     /* Profile */
@@ -292,11 +302,16 @@ footer {
 
     #form-result {
         width: 100%;
+        margin: 0;
     }
 }
 
 /* Mobile */
 @media (max-width: 480px) {
+    html {
+        scroll-padding-top: 0;
+    }
+
     /* Navigation */
     nav {
         flex-direction: column;
@@ -304,9 +319,17 @@ footer {
         position: relative;
     }
 
+    nav > section {
+        width: 100%;
+    }
+
     nav > section > a {
         display: block;
         margin: 5px 0;
+    }
+
+    main {
+        margin-top: 0;
     }
 
     /* Banner Height */
@@ -339,5 +362,6 @@ footer {
 
     #form-result {
         width: 100%;
+        margin: 0;
     }
 }

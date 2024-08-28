@@ -52,7 +52,7 @@ function displayFormResult(event) {
         throw error;
     }
 
-    // doublecheck validation if there's an error after the try block
+    // doublecheck validation kalo tidak ada error
     if (!name || !birthDate || !gender || !message) {
         alert('Harap isi semua form nya terlebih dahulu');
         return;
@@ -67,5 +67,3 @@ function displayFormResult(event) {
     `;
     document.getElementById('form-result').innerHTML = result;
 }
-
-// document.getElementById('submitForm').addEventListener('click', displayFormResult);

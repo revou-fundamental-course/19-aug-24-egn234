@@ -16,28 +16,28 @@
 
             <section>
                 <a href="#home">Home</a>
-                <a href="#profile">Profile Saya</a>
-                <a href="#portofolio">Portfolio</a>
-                <a href="#contacUs">Message Us</a>
+                <a href="#carousel">Live in Gunma</a>
+                <a href="#services">Our Services</a>
+                <a href="#contactUs">Message Us</a>
             </section>
         </nav>
 
         <main>
             <article id="home">
                 <header>
-                    <h1>Welcome to MyWebsite</h1>
+                    <h1>Traveling Gunma Prefecture</h1>
                 </header>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <div class="banner">
+                <p>Gunma Prefecture, located in the Kanto region of Japan, is known for its beautiful mountains, hot springs (onsen), and rich history, offering a mix of natural beauty and cultural heritage.</p>
+                <div class="banner" id="carousel">
                     <div class="banner-inner">
                         <div class="banner-item">
-                            <img src="https://via.placeholder.com/1200x600/FF0000/FFFFFF?text=Banner+1" alt="Banner 1">
+                            <img src="https://imgcp.aacdn.jp/img-a/1720/auto/global-aaj-front/article/2020/11/5fac8d63a96e1_5fac8a4eba6d7_1017044436.jpg" alt="Kusatsu Street">
                         </div>
                         <div class="banner-item">
-                            <img src="https://via.placeholder.com/1200x600/00FF00/FFFFFF?text=Banner+2" alt="Banner 2">
+                            <img src="https://jw-webmagazine.com/wp-content/uploads/2022/10/Gunma-KajikaBridge-1782x1152.jpg" alt="Kajika Bridge">
                         </div>
                         <div class="banner-item">
-                            <img src="https://via.placeholder.com/1200x600/0000FF/FFFFFF?text=Banner+3" alt="Banner 3">
+                            <img src="https://www.tokyoweekender.com/wp-content/uploads/2018/08/shutterstock_287196851-feature-1.jpg" alt="Kusatsu Onsen">
                         </div>
                     </div>
                     <button class="prev" onclick="prevSlide()">&#10094;</button>
@@ -45,30 +45,36 @@
                 </div>
             </article>
             
-            <section class="profile" id="profil">
+            <section class="profile" id="services">
                 <header>
-                    <h1>Our Facilitation</h1>
+                    <h1>Our Services</h1>
                 </header>
 
                 <div class="profile-list">
                     <div class="profile-container">
-                        <div class="image"></div>
-                        <span>Software Engineer</span>
+                        <div class="image">
+                            <img src="https://orioly.com/wp-content/uploads/2016/12/visiting-a-monument-with-friends-qualities-of-a-good-tour-guide-1.jpeg">
+                        </div>
+                        <span>Professional Tour Guides</span>
                     </div>
                     
                     <div class="profile-container">
-                        <div class="image"></div>
-                        <span>Software Engineer</span>
+                        <div class="image">
+                            <img src="https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/6/2016/09/Japan-Matsuri-1024x768.jpg">
+                        </div>
+                        <span>Cultural Experiences</span>
                     </div>
                     
                     <div class="profile-container">
-                        <div class="image"></div>
-                        <span>Software Engineer</span>
+                        <div class="image">
+                            <img src="https://i.pinimg.com/originals/89/58/2d/89582d360417dc1bcf41b6dbe9bb57b9.jpg">
+                        </div>
+                        <span>Honeymoon Package</span>
                     </div>
                 </div>
             </section>
 
-            <section class="portfolio" id="portofolio">
+            <section class="portfolio" id="contactUs">
                 <header>
                     <h1>Message Us</h1>
                 </header>
@@ -83,7 +89,7 @@
                                     </td>
                                     <td>:</td>
                                     <td>
-                                        <input class="form-input" type="text" name="nama" id="nama" placeholder="Nama">
+                                        <input class="form-input" type="text" name="nama" id="nama" placeholder="Nama" required>
                                     </td>
                                 </tr>
                                 <tr>
@@ -92,7 +98,7 @@
                                     </td>
                                     <td>:</td>
                                     <td>
-                                        <input class="form-input" type="date" name="tgl_lahir" id="tgl_lahir">
+                                        <input class="form-input" type="date" name="tgl_lahir" id="tgl_lahir" required>
                                     </td>
                                 </tr>
                                 <tr>
@@ -129,7 +135,7 @@
         </main>
 
         <footer>
-            <p>&copy; 2023 MyWebsite. All rights reserved.</p>
+            <p>&copy; 2023 EggAnt. All rights reserved.</p>
         </footer>
 
         <script src="js/script.js"></script>
